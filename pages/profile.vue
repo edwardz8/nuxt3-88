@@ -7,6 +7,8 @@ const user = useSupabaseUser()
 const client = useSupabaseClient()
 const router = useRouter()
 
+console.log(user.value, 'user value')
+
 async function logout() {
     try {
         const { error } = await client.auth.signOut()

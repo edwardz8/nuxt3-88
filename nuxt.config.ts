@@ -18,8 +18,7 @@ export default defineNuxtConfig({
   supabase: {
     redirectOptions: {
       login: '/',
-      callback: '/confirm',
-      // https://klxnzvrbhgldxcvysinu.supabase.co/auth/v1/callback
+      callback: '/confirm'
     }
   }
 })

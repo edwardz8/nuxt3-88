@@ -1,6 +1,11 @@
 <script setup lang="ts">
+import { useUserStore } from '~/stores/user'
+
+const userStore = useUserStore()
 const client = useSupabaseClient()
 const user = useSupabaseUser()
+
+console.log(user.value, 'user value')
 
 const logout = async () => {
   await client.auth.signOut()
@@ -10,25 +15,12 @@ const logout = async () => {
 
 <template>
   <div>
-    <Title>Nuxt 3 x Supabase</Title>
+    <Title>Nuxt3xSupabase</Title>
     <div class="flex items-center md:justify-between justify-center">
-      <div class="hidden md:block">
-       <!--  <UButton
-          label="Source"
-          variant="transparent"
-          target="_blank"
-          to="https://github.com/edwardz8"
-          icon="i-heroicons-outline-external-link"
-        /> -->
-        <!-- <UButton
-          label="Hosted on Vercel"
-          variant="transparent"
-          target="_blank"
-          to="https://vercel.com"
-          icon="i-heroicons-outline-external-link"
-        /> -->
-      </div>
-      <Icon name="material-symbols:sports-hockey" size="35" color="#e8e8e8" />
+      <Icon name="material-symbols:sports-outline" size="25" color="#e8e8e8" />
+      <button @click="userStore.isMenuOverlay = true" class="w-full h-full">
+        <Icon name="ri:edit-box-line" size="25" color="#e8e8e8" />
+    </button>
       <div class="flex items-center">
         <UButton
           v-if="user"

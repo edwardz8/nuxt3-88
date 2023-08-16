@@ -32,6 +32,16 @@ pnpm run dev
 yarn dev
 ```
 
+## Prisma Setup
+
+```bash
+
+npx prisma init
+
+npx prisma migrate dev --name init
+
+```
+
 ## Production
 
 Build the application for production:

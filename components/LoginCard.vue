@@ -4,7 +4,7 @@
       <div>
         <div class="relative">
           <div class="flex justify-center text-sm">
-            <p class="text-gray-500"> Connect with </p>
+            <p class="text-gray-500"> Connect via </p>
           </div>
         </div>
         <slot />
