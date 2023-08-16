@@ -12,7 +12,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       bucketUrl: process.env.BUCKET_URL,
-      baseUrl: process.env.BASE_URL || 'http://localhost:3000'
+      baseUrl: process.env.BASE_URL || 'https://nuxt3-88.vercel.app'
     },
   },
   supabase: {
